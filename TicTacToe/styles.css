@@ -1,0 +1,59 @@
+html, body{
+  height: 95%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f7f7;
+
+}
+
+.justify-content{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.ticTacToe {
+  width: 200px;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.board-container{
+  height: 90%;
+  width: 100%; 
+}
+
+.board {
+  width: 492px;
+  
+}
+
+.box {
+  width: 160px;
+  height: 160px;
+  border:2px solid black;
+}
+
+.box:hover {
+  background-color: rgba(154, 187, 240, 0.551);
+  cursor: pointer;
+}
+
+.margin {
+  margin-bottom: -80px;
+  padding: -50px 0px -50px;
+}
