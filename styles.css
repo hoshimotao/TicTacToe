@@ -61,3 +61,13 @@ html, body{
   margin-bottom: -80px;
   padding: -50px 0px -50px;
 }
+
+img{
+  padding-bottom: 10px;
+}
+
+.reset{
+  padding: 5px 10px;
+  font-size: 1.2em;
+  
+}
