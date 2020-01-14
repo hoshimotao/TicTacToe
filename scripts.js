@@ -5,6 +5,11 @@ $(document).ready(function(){
   let turn = 1;
   let movesMade = 0
 
+  let reset = $(".reset");
+  reset.on("click", function(e){
+    location.reload();
+  })
+
   let sqr = $(".box");
   sqr.on("click", function(e){ 
     
@@ -25,7 +30,7 @@ $(document).ready(function(){
     if(checkForWinner()){
 
       let theWinner = turn === 1 ?player2:player1;
-      declareWinner();
+      // declareWinner();
     }
 
   });
@@ -53,44 +58,43 @@ $(document).ready(function(){
 
       return winningCombos.find(function(combo){
         // compare each combo
-        if(results[combo[0]] !== "" && results[combo[1]] !== "" && results[combo[0]] === results[combo[1]] && 
-        results[combo[1]] === results[combo[2]]
-        
-        ||
-        
-        results[combo[3]] !== "" && results[combo[4]] !== "" && results[combo[3]] === results[combo[4]] && 
-        results[combo[4]] === results[combo[5]]
-        
-        ||
-        
-        results[combo[6]] !== "" && results[combo[7]] !== "" && results[combo[6]] === results[combo[7]] && 
-        results[combo[7]] === results[combo[8]]
-        
-        ||
-        
-        results[combo[0]] !== "" && results[combo[3]] !== "" && results[combo[0]] === results[combo[3]] && 
-        results[combo[3]] === results[combo[6]]
-        
-        ||
-        
-        results[combo[1]] !== "" && results[combo[4]] !== "" && results[combo[1]] === results[combo[4]] && 
-        results[combo[4]] === results[combo[7]]
-        
-        ||
-        
-        results[combo[2]] !== "" && results[combo[5]] !== "" && results[combo[2]] === results[combo[5]] && 
-        results[combo[5]] === results[combo[8]]
+        if(results[combo[0]] === "X" && results[combo[1]] === "X" && results[combo[2]] === "X"        
+        ||        
+        results[combo[3]] === "X" && results[combo[4]] === "X" && results[combo[5]] === "X"        
+        ||        
+        results[combo[6]] === "X" && results[combo[7]] === "X" && results[combo[8]] === "X"         
+        ||        
+        results[combo[0]] === "X" && results[combo[3]] === "X" && results[combo[6]] === "X"         
+        ||        
+        results[combo[1]] === "X" && results[combo[4]] === "X" && results[combo[7]] === "X"         
+        ||        
+        results[combo[2]] === "X" && results[combo[5]] === "X" && results[combo[8]] === "X" 
+        ||        
+        results[combo[0]] === "X" && results[combo[4]] === "X" && results[combo[8]] === "X"        
+        ||        
+        results[combo[2]] === "X" && results[combo[4]] === "X" && results[combo[6]] === "X"){
+          
+          alert("Player 1 wins")
+          return true
+        }
 
-        ||
-        
-        results[combo[0]] !== "" && results[combo[4]] !== "" && results[combo[0]] === results[combo[4]] && 
-        results[combo[4]] === results[combo[8]]
-        
-        ||
-        
-        results[combo[2]] !== "" && results[combo[4]] !== "" && results[combo[2]] === results[combo[4]] && 
-        results[combo[4]] === results[combo[6]]){
-          alert('player 1 wins')
+        else if(results[combo[0]] === "O" && results[combo[1]] === "O" && results[combo[2]] === "O"        
+        ||        
+        results[combo[3]] === "O" && results[combo[4]] === "O" && results[combo[5]] === "O"        
+        ||        
+        results[combo[6]] === "O" && results[combo[7]] === "O" && results[combo[8]] === "O"         
+        ||        
+        results[combo[0]] === "O" && results[combo[3]] === "O" && results[combo[6]] === "O"         
+        ||        
+        results[combo[1]] === "O" && results[combo[4]] === "O" && results[combo[7]] === "O"         
+        ||        
+        results[combo[2]] === "O" && results[combo[5]] === "O" && results[combo[8]] === "O" 
+        ||        
+        results[combo[0]] === "O" && results[combo[4]] === "O" && results[combo[8]] === "O"         
+        ||        
+        results[combo[2]] === "O" && results[combo[4]] === "O" && results[combo[6]] === "O"){
+
+          alert("Player 2 Wins!")
           return true
         }
         else{
