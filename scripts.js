@@ -30,7 +30,6 @@ $(document).ready(function(){
     if(checkForWinner()){
 
       let theWinner = turn === 1 ?player2:player1;
-      // declareWinner();
     }
 
   });
@@ -74,7 +73,7 @@ $(document).ready(function(){
         ||        
         results[combo[2]] === "X" && results[combo[4]] === "X" && results[combo[6]] === "X"){
           
-          alert("Player 1 wins")
+          alert("Player 1 Wins")
           return true
         }
 
@@ -103,7 +102,6 @@ $(document).ready(function(){
       })
     }
   }
-
 })
 
  
