@@ -5,14 +5,38 @@ $(document).ready(function(){
   let turn = 1;
   let movesMade = 0
 
+
+
   let reset = $(".reset");
-  reset.on("click", function(e){
+  reset.on("click", function(e){    
     location.reload();
   })
 
+  // Modal
+  var modal = document.getElementById("myModal");
+
+  var winner = document.getElementById("winner")
+
+
+
+
+
+//trigger modal to display
+  function triggerModal(){
+    modal.style.display = "block";
+    if(turn !== 1){
+      winner.innerHTML = "Player 1 Wins!"
+    console.log("Player 1 Wins!")
+    }
+    if(turn === 1){
+      winner.innerHTML = "Player 2 Wins!"
+    console.log("Player 2 Wins!")
+    }
+  }
+
+
   let sqr = $(".box");
-  sqr.on("click", function(e){ 
-    
+  sqr.on("click", function(e){     
     movesMade++;
 
     if(turn === 1){
@@ -25,14 +49,12 @@ $(document).ready(function(){
       e.target.innerHTML = player2;
       e.target.style.color="blue";
       turn--;
-    } 
-    
+    }     
     if(checkForWinner()){
-
       let theWinner = turn === 1 ?player2:player1;
     }
-
   });
+
 
   function checkForWinner(){
     if(movesMade > 4){
@@ -40,7 +62,6 @@ $(document).ready(function(){
       let results = moves.map(function(sqr){
         return sqr.innerHTML;
       })
-
       // Show an array of x's and o's that have been played
       console.log(results)
       
@@ -56,7 +77,7 @@ $(document).ready(function(){
       ];
 
       return winningCombos.find(function(combo){
-        // compare each combo
+        // winning combinations
         if(results[combo[0]] === "X" && results[combo[1]] === "X" && results[combo[2]] === "X"        
         ||        
         results[combo[3]] === "X" && results[combo[4]] === "X" && results[combo[5]] === "X"        
@@ -73,7 +94,7 @@ $(document).ready(function(){
         ||        
         results[combo[2]] === "X" && results[combo[4]] === "X" && results[combo[6]] === "X"){
           
-          alert("Player 1 Wins")
+          triggerModal();          
           return true
         }
 
@@ -93,7 +114,7 @@ $(document).ready(function(){
         ||        
         results[combo[2]] === "O" && results[combo[4]] === "O" && results[combo[6]] === "O"){
 
-          alert("Player 2 Wins!")
+          triggerModal();          
           return true
         }
         else{
