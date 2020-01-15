@@ -5,8 +5,6 @@ $(document).ready(function(){
   let turn = 1;
   let movesMade = 0
 
-
-
   var reset = $(".reset");
   reset.on("click", function(e){    
     location.reload();
@@ -16,10 +14,6 @@ $(document).ready(function(){
   var modal = document.getElementById("myModal");
 
   var winner = document.getElementById("winner")
-
-
-
-
 
 //trigger modal to display
   function triggerModal(){

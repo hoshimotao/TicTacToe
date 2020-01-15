@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, height=device-height, user-scalable=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=0.5, maximum-scale=0.5, height=device-height, user-scalable=no">
   <title> Tic Tac Toe </title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
-<link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
 </head>
 
 
 <body>
   <div class="justify-content flex-container flex-column">
-    <img class="ticTacToe" src= "./images/tictactoe.jpg" alt="Tic Tac Toe Logo">      
+    <img class="ticTacToe" src="./images/tictactoe.jpg" alt="Tic Tac Toe Logo">
   </div>
   <div class="justify-content flex-container flex-column">
     <div class="winner"></div>
-    
+
   </div>
 
   <div class="board-container flex-container flex-column flex-center">
@@ -34,22 +36,23 @@
   </div>
 
   <!-- The Modal -->
-<div id="myModal" class="modal">
+  <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close reset">&times;</span>
-    <p id="winner"></p>
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close reset">&times;</span>
+      <p id="winner"></p>
+    </div>
+
   </div>
 
-</div>
-  
   <div class="justify-content">
-  <button class="reset"> Restart </button>
+    <button class="reset"> Restart </button>
   </div>
-  
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
   <script src="./scripts.js"></script>
-  
+
 </body>
+
 </html>
