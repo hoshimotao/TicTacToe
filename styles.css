@@ -67,6 +67,7 @@ img{
 }
 
 .modal {
+  
   display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -87,6 +88,7 @@ img{
   border-radius: 10px;
   width: 40%; /* Could be more or less, depending on screen size */
   height: 20%;  
+  position: relative;
 
 }
 
@@ -94,23 +96,207 @@ img{
   color: white;
   text-align: center;
   font-size: 2em;
+  
 }
 
 /* The Close Button */
-.close {
+#close {
   color: black;
-  float: right;
   font-size: 28px;
   font-weight: bold;
   width: 25px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  
 }
 
-.close:hover{
+
+#close:hover{
   /* color: black; */
   text-decoration: none;
   cursor: pointer;
   color: red;
 }
+
+.balloon { 
+  width: 70%;
+  height: 20%;
+  margin: 0 auto;
+  padding-top: 30px;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.balloon > div {
+  display: flex;
+  text-align: center;
+  font-size: 1.2em;
+  width:110px;
+  height:120px; 
+  background: rgba(182, 15, 97, 0.9);;
+  border-radius:0;
+  border-radius:80% 80% 80% 80%;  
+  padding:10px;
+  box-shadow:inset 17px 7px 10px rgba(182, 15, 97, 0.9); 
+  transform-origin: bottom center; 
+}
+.balloon > div:nth-child(1){
+  background: rgba(182, 15, 96, 0.272);;
+  left: 0; 
+  box-shadow:inset 10px 10px 10px darken(rgba(182, 15, 97, 0.9), 10%);
+  -webkit-animation:balloon1 6s ease-in-out infinite;
+  -moz-animation:balloon1 6s ease-in-out infinite;
+  -o-animation:balloon1 6s ease-in-out infinite;
+  animation:balloon1 6s ease-in-out infinite;
+
+}
+.balloon > div:nth-child(2){
+  background: rgba(242, 112, 45, 0.9);
+  left: 120px; 
+  box-shadow:inset 10px 10px 10px darken(rgba(242, 112, 45, 0.9), 10%);
+   -webkit-animation:balloon2 6s ease-in-out infinite;
+  -moz-animation:balloon2 6s ease-in-out infinite;
+  -o-animation:balloon2 6s ease-in-out infinite;
+  animation:balloon2 6s ease-in-out infinite;
+
+}
+.balloon > div:nth-child(3){
+  background: rgba(45, 181, 167, 0.9);
+  left: 240px; 
+  box-shadow:inset 10px 10px 10px darken(rgba(45, 181, 167, 0.9), 10%);
+   -webkit-animation:balloon4 6s ease-in-out infinite;
+  -moz-animation:balloon4 6s ease-in-out infinite;
+  -o-animation:balloon4 6s ease-in-out infinite;
+  animation:balloon4 6s ease-in-out infinite;
+
+
+}
+.balloon > div:nth-child(4){
+  background: rgba(190, 61, 244, 0.9);
+  left: 360px; 
+  box-shadow:inset 10px 10px 10px darken(rgba(190, 61, 244, 0.9), 10%); 
+   -webkit-animation:balloon1 5s ease-in-out infinite;
+  -moz-animation:balloon1 5s ease-in-out infinite;
+  -o-animation:balloon1 5s ease-in-out infinite;
+  animation:balloon1 5s ease-in-out infinite;
+
+}
+.balloon > div:nth-child(5){
+  background: rgba(180, 224, 67, 0.9);
+  left: 480px; 
+  box-shadow:inset 10px 10px 10px darken(rgba(180, 224, 67, 0.9), 10%);
+   -webkit-animation:balloon3 5s ease-in-out infinite;
+  -moz-animation:balloon3 5s ease-in-out infinite;
+  -o-animation:balloon3 5s ease-in-out infinite;
+  animation:balloon3 5s ease-in-out infinite;
+
+}
+.balloon > div:nth-child(6){
+  background: rgba(242, 194, 58, 0.9);
+  left: 600px; 
+  box-shadow:inset 10px 10px 10px darken(rgba(242, 194, 58, 0.9), 10%);
+  -webkit-animation:balloon2 3s ease-in-out infinite;
+  -moz-animation:balloon2 3s ease-in-out infinite;
+  -o-animation:balloon2 3s ease-in-out infinite;
+  animation:balloon2 3s ease-in-out infinite;
+
+}
+.balloon > div:before {
+  color:rgba(182, 15, 97, 0.9);
+  position:absolute;
+  bottom:-11px;
+  left: 52px;  
+  content:"▲";
+  font-size:1em;
+}
+
+.loons {
+  font-size: 5em;
+  color: white;
+  position: relative;
+  top: 0;
+  left: 20%;
+  /* margin-left: -20px;  */
+} 
+
+/*BALLOON 1 4*/
+@-webkit-keyframes balloon1 {
+  0%,100%{ -webkit-transform:translateY(0) rotate(-6deg);}
+  50%{ -webkit-transform:translateY(-20px) rotate(8deg); }
+}
+@-moz-keyframes balloon1 {
+  0%,100%{ -moz-transform:translateY(0) rotate(-6deg);}
+  50%{ -moz-transform:translateY(-20px) rotate(8deg); }
+}
+@-o-keyframes balloon1 {
+  0%,100%{ -o-transform:translateY(0) rotate(-6deg);}
+  50%{ -o-transform:translateY(-20px) rotate(8deg); }
+}
+@keyframes balloon1 {
+  0%,100%{ transform:translateY(0) rotate(-6deg);}
+  50%{ transform:translateY(-20px) rotate(8deg); }
+}
+
+/* BAllOON 2 5*/
+@-webkit-keyframes balloon2 {
+  0%,100%{ -webkit-transform:translateY(0) rotate(6eg);}
+  50%{ -webkit-transform:translateY(-30px) rotate(-8deg); }
+}
+@-moz-keyframes balloon2 {
+  0%,100%{ -moz-transform:translateY(0) rotate(6deg);}
+  50%{ -moz-transform:translateY(-30px) rotate(-8deg); }
+}
+@-o-keyframes balloon2 {
+  0%,100%{ -o-transform:translateY(0) rotate(6deg);}
+  50%{ -o-transform:translateY(-30px) rotate(-8deg); }
+}
+@keyframes balloon2 {
+  0%,100%{ transform:translateY(0) rotate(6deg);}
+  50%{ transform:translateY(-30px) rotate(-8deg); }
+}
+
+
+/* BAllOON 0*/
+@-webkit-keyframes balloon3 {
+  0%,100%{ -webkit-transform:translate(0, -10px) rotate(6eg);}
+  50%{ -webkit-transform:translate(-20px, 30px) rotate(-8deg); }
+}
+@-moz-keyframes balloon3 {
+ 0%,100%{ -moz-transform:translate(0, -10px) rotate(6eg);}
+  50%{ -moz-transform:translate(-20px, 30px) rotate(-8deg); }
+}
+@-o-keyframes balloon3 {
+ 0%,100%{ -o-transform:translate(0, -10px) rotate(6eg);}
+  50%{ -o-transform:translate(-20px, 30px) rotate(-8deg); }
+}
+@keyframes balloon3 {
+ 0%,100%{ transform:translate(0, -10px) rotate(6eg);}
+  50%{ transform:translate(-20px, 30px) rotate(-8deg); }
+}
+
+/* BAllOON 3*/
+@-webkit-keyframes balloon4 {
+  0%,100%{ -webkit-transform:translate(10px, -10px) rotate(-8eg);}
+  50%{ -webkit-transform:translate(-15px, 20px) rotate(10deg); }
+} 
+@-moz-keyframes balloon4 {
+  0%,100%{ -moz-transform:translate(10px, -10px) rotate(-8eg);}
+  50%{ -moz-transform:translate(-15px, 10px) rotate(10deg); }
+}
+@-o-keyframes balloon4 {
+  0%,100%{ -o-transform:translate(10px, -10px) rotate(-8eg);}
+  50%{ -o-transform:translate(-15px, 10px) rotate(10deg); }
+}
+@keyframes balloon4 {
+  0%,100%{ transform:translate(10px, -10px) rotate(-8eg);}
+  50%{ transform:translate(-15px, 10px) rotate(10deg); }
+}
+
+
+
+
+
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */

@@ -17,7 +17,9 @@ $(document).ready(function(){
 
 //trigger modal to display
   function triggerModal(){
-    modal.style.display = "block";
+    
+    modal.style.display = "block"
+    
     if(turn !== 1){
       winner.innerHTML = "Player 1 Wins!"
     console.log("Player 1 Wins!")

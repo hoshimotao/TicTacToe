@@ -7,8 +7,8 @@
     content="width=device-width, initial-scale=0.5, maximum-scale=0.5, height=device-height, user-scalable=no">
   <title> Tic Tac Toe </title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
-  <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+  <!-- <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css"> -->
 </head>
 
 
@@ -38,17 +38,31 @@
   <!-- The Modal -->
   <div id="myModal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close reset">&times;</span>
-      <p id="winner"></p>
-    </div>
+
+    <div class="balloon">
+      <div><span class="loons">N</span></div>
+      <div><span class="loons">I</span></div>
+      <div><span class="loons">C</span></div>      
+      <div><span class="loons">E</span></div>
+      <div><span class="loons">!</span></div>
+     </div>
+        <!-- Modal content -->
+        <div class="modal-content">
+          
+            <p class="reset"><span id="close">X</span></p>
+            <p id="winner"></p>
+          
+        </div>
+
+
 
   </div>
 
   <div class="justify-content">
     <button class="reset"> Restart </button>
   </div>
+
+
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
   <script src="./scripts.js"></script>
