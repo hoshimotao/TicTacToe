@@ -1,5 +1,5 @@
 # TicTacToe
-Classic Tic-Tac-Toe game that keeps track of users and high scores.
+Classic Tic-Tac-Toe game. Go head to head with your oppenent in this throwback strategy game!
 
 Really wanted to challenge myself with CSS concepts by not using Bootstrap for the modal. 
 Lessons learned: 
