@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 
 
-  let reset = $(".reset");
+  var reset = $(".reset");
   reset.on("click", function(e){    
     location.reload();
   })
