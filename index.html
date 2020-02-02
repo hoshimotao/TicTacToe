@@ -21,7 +21,20 @@
 
   </div>
 
-  <div class="board-container flex-container flex-column flex-center">
+  <!-- Choose Board Size -->
+  <div class="choose">
+    <p> Select Board Size </p>
+    <select>
+      <option value="threeByThree">3 x 3</option>
+      <option value="fourByFour">4 x 4</option>
+      <option value="tenByTen">10 x 10</option>
+    </select>
+    <button> Confirm </button>
+  </div>
+
+
+  <div id="threeByThree">
+  <div class="board-container flex-container flex-column flex-center" >
     <div class="board flex-container flex-wrap">
       <div class="box"></div>
       <div class="box"></div>
@@ -33,6 +46,12 @@
       <div class="box"></div>
       <div class="box"></div>
     </div>
+  </div>
+
+  <div class="justify-content">
+    <button class="reset"> Restart </button>
+  </div>
+
   </div>
 
   <!-- The Modal -->
@@ -56,10 +75,6 @@
 
 
 
-  </div>
-
-  <div class="justify-content">
-    <button class="reset"> Restart </button>
   </div>
 
 

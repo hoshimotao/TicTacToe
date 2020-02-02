@@ -72,6 +72,25 @@ $(document).ready(function(){
         [2,4,6]
       ];
 
+
+
+
+      function displayShow() {
+        var showThreeByThree = document.getElementById("threeByThree");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+
+
+
+
+
+
+
       return winningCombos.find(function(combo){
         // winning combinations
         if(results[combo[0]] === "X" && results[combo[1]] === "X" && results[combo[2]] === "X"        

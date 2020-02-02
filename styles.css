@@ -5,6 +5,18 @@ html, body{
 
 }
 
+
+#threeByThree{
+  display: none;
+}
+
+.choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  
+}
 .justify-content{
   justify-content: center;
   text-align: center;
