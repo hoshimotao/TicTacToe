@@ -6,6 +6,11 @@ html, body{
 }
 
 
+
+.selector{
+  display: block;
+}
+
 #threeByThree{
   display: none;
 }
